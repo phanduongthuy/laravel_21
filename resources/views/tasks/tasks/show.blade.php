@@ -38,7 +38,7 @@
                 </div>
                 <div class="panel-body">
                     <h4>Tên công việc: {{ $task->name }}</h4>
-                    <h4>Nội dung:</h4>{{ $task->content }}
+                    <h4>Nội dung:</h4>{!! $task->content !!}
                     <h4>Mức độ ưu tiên công việc: {{ $task->priority_text }}</h4>
                     <h4>Thời hạn:</h4>{{ $task->deadline }}
                     <h4>Trạng thái công việc: {{ $task->status_text }}</h4>

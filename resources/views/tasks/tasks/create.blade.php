@@ -52,10 +52,10 @@
                     </div>
                     <!-- Task Content -->
                     <div class="form-group">
-                        <label for="task-content" class="col-sm-3 control-label">Mô tả công việc</label>
+                        <label for="editor-content" class="col-sm-3 control-label">Mô tả công việc</label>
 
                         <div class="col-sm-6">
-                            <textarea class="form-control" name="content" id="task-content"  placeholder="Nhập nội dung công việc" value="{{ old('task') }}"></textarea>
+                            <textarea class="form-control" name="content" id="editor-content"  placeholder="Nhập nội dung công việc" value="{{ old('task') }}"></textarea>
                         </div>
                     </div>
                     <!-- Task priority  -->
@@ -91,4 +91,13 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('script')
+    <script src="//cdn.ckeditor.com/4.16.1/full/ckeditor.js"></script> 
+    <script>
+        // Replace the <textarea id="editor1"> with a CKEditor 4
+        // instance, using default configuration.
+        CKEDITOR.replace( 'editor-content' );
+    </script>
 @endsection
